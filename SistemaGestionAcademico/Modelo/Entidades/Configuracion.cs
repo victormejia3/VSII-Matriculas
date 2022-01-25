@@ -17,6 +17,6 @@ namespace Modelo.Entidades
 
         // Relación con Períodos
         public Periodo PeriodoVigente { get; set; }
-        public int PeriodoId { get; set; }
+        public int PeriodoVigenteId { get; set; }
     }
 }

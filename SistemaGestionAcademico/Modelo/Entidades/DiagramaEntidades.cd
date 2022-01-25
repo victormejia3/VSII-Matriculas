@@ -1,80 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Modelo.Entidades.Calificacion" Collapsed="true">
-    <Position X="2.5" Y="2.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Modelo.Entidades.Calificacion">
+    <Position X="5.75" Y="3.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAQAAAAAAAlAAACAAACAAAAAAABAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Entidades\Calificacion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Curso" Collapsed="true">
-    <Position X="4.25" Y="2.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Curso">
+    <Position X="0.5" Y="2.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQAACAgAAAAAiAAAAgAAAFgQAAAAAQAAAAAAgAAA=</HashCode>
       <FileName>Entidades\Curso.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Modelo.Entidades.Configuracion">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="6" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAgAAAgAACAAAAAAAAAAACAAAAAAAAAAAABA=</HashCode>
+      <HashCode>AAAAAIAAAAACAgAACAAAAAAAAAAACAAAAAAAAAAAABA=</HashCode>
       <FileName>Entidades\Configuracion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Carrera" Collapsed="true">
-    <Position X="0.75" Y="3.25" Width="1.5" />
+  <Class Name="Modelo.Entidades.Carrera">
+    <Position X="8.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAgAAAAgAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Entidades\Carrera.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Estudiante" Collapsed="true">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Estudiante">
+    <Position X="0.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAIAAAAAgEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entidades\Estudiante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Materia" Collapsed="true">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Materia">
+    <Position X="0.5" Y="6" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEIAAAAQAAAAACACAAgAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Entidades\Materia.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Matricula" Collapsed="true">
-    <Position X="0.75" Y="1.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Matricula">
+    <Position X="3" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQAIAAgAAAAEgAAAAAEAABAAAAAAAQAAAAAAAACg=</HashCode>
       <FileName>Entidades\Matricula.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Matricula_Det" Collapsed="true">
-    <Position X="2.5" Y="1.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Matricula_Det">
+    <Position X="3" Y="3.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAIAEQABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entidades\Matricula_Det.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Periodo" Collapsed="true">
-    <Position X="4.25" Y="1.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Periodo">
+    <Position X="3" Y="6" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAwAAAAAAAAAAgAAAAgAAAAAAAAAAAAAgAAg=</HashCode>
       <FileName>Entidades\Periodo.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Modelo.Entidades.Malla" Collapsed="true">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Malla">
+    <Position X="8.25" Y="2.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAAIAAiAAAAAAAAAASAAAAAQAAAACAAAAM=</HashCode>
       <FileName>Entidades\Malla.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Modelo.Entidades.Prerrequisito" Collapsed="true">
-    <Position X="0.75" Y="2.5" Width="1.5" />
+  <Class Name="Modelo.Entidades.Prerequisito">
+    <Position X="6" Y="6.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entidades\Prerrequisito.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Entidades\Prerequisito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modelo.Entidades.Nivel">
+    <Position X="8.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAACAAAAgAAAAAQAAAAAAAAAAAAQAAI=</HashCode>
+      <FileName>Entidades\Nivel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
