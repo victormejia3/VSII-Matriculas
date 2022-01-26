@@ -22,6 +22,13 @@ namespace CargaDatos
             // --------------------------------------------
             #region
             // Periodo 2020-PA=2
+            Periodo p2020_PAO1 = new Periodo()
+            {
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 9, 30),
+                Estado = "Ejecutado"
+            };
+            // Periodo 2020-PA=2
             Periodo p2020_PAO2 = new Periodo()
             {
                 FechaInicio = new DateTime(2020, 9, 1),
@@ -286,8 +293,8 @@ namespace CargaDatos
             // --------------------------------------------
             // Malla de Comercio Electrónico
             // --------------------------------------------
+            #region
             // Los prerrequisitos de las mallas
-
             // Pre requisitos de ProgWeb
             Malla malProgWeb = new Malla()
             {
@@ -363,10 +370,11 @@ namespace CargaDatos
             {
                 mallaComerio
             };
-
+            #endregion
             // --------------------------------------------
             // Niveles
             // --------------------------------------------
+            #region
             // Nivel 1 ************************************
             Nivel nivel10 = new Nivel()
             {
@@ -526,7 +534,23 @@ namespace CargaDatos
                 nivel40, nivel41, nivel42, nivel43,
                 nivel50, nivel51, nivel52, nivel53
             };
+            #endregion
+            // --------------------------------------------
+            // Cursos
+            // --------------------------------------------
+            #region
+            Curso cur2020_1 = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO1,
+                Jornada = "Matutino",
+                Materia = matMarkDig,
+                Nombre = "COM-2020-1-MAT Marketing Digital",
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 4, 15)
+            };
 
+            #endregion
             // --------------------------------------------
             // Diccionario contiene todas las listas
             // --------------------------------------------
