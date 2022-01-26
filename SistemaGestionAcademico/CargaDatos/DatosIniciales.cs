@@ -286,8 +286,8 @@ namespace CargaDatos
             // --------------------------------------------
             // Malla de Comercio Electrónico
             // --------------------------------------------
+            #region
             // Los prerrequisitos de las mallas
-
             // Pre requisitos de ProgWeb
             Malla malProgWeb = new Malla()
             {
@@ -363,7 +363,7 @@ namespace CargaDatos
             {
                 mallaComerio
             };
-
+            #endregion
             // --------------------------------------------
             // Niveles
             // --------------------------------------------
