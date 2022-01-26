@@ -19,5 +19,26 @@ namespace WebApp.Controllers
             IEnumerable<Materia> listaMaterias = db.materias;
             return View(listaMaterias);
         }
+
+        // GET
+        //  Presenta el formulario vacio listo para crear una entidad
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST
+        //  Guarda una materia
+        [HttpPost]
+        public IActionResult Create(Materia materia)
+        {
+            db.materias.Add(materia);
+            db.SaveChanges();
+            
+            TempData["mensaje"] = "La materia se ha creado correctamente";
+
+            return RedirectToAction("Index");
+        }
     }
 }
