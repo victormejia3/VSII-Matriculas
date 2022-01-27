@@ -23,15 +23,70 @@ namespace WebAppSGA.Controllers
             return View(listaMaterias);
         }
 
-        public IActionResult Delete()
-        {
-            return View();
-        }
-
+        //  Creación de materia
+        //  Presenta el formulario vacio listo para crear una entidad
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        //  Guarda una materia
+        [HttpPost]
+        public IActionResult Create(Materia materia)
+        {
+            db.materias.Add(materia);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"La materia {materia.Nombre} ha sido creada exitosamente";
+
+            return RedirectToAction("Index");
+        }
+
+        //  Edición de materia
+        //  Presenta el formulario lleno con los datos de la materia seleccionada
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            // Consultar la materia por medio del id
+            Materia materia = db.materias.Find(id);
+
+            return View(materia);
+        }
+
+        //  Actualiza una materia
+        [HttpPost]
+        public IActionResult Edit(Materia materia)
+        {
+            db.materias.Update(materia);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"La materia {materia.Nombre} ha sido actualizada exitosamente";
+
+            return RedirectToAction("Index");
+        }
+
+        //  Borrado de materia
+        //  Presenta el formulario lleno con los datos de la materia seleccionada
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            // Consultar la materia por medio del id
+            Materia materia = db.materias.Find(id);
+
+            return View(materia);
+        }
+
+        //  Borrar una materia
+        [HttpPost]
+        public IActionResult Delete(Materia materia)
+        {
+            db.materias.Remove(materia);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"La materia {materia.Nombre} ha sido eliminada exitosamente";
+
+            return RedirectToAction("Index");
+        }
     }
 }

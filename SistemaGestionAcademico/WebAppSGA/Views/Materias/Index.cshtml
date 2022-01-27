@@ -16,11 +16,24 @@
             <h3>Materias</h3>
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-sucess d-block">
+            <a class="btn btn-success d-block"
+                asp-controller="Materias" asp-action="Create">
                 Crear nueva materia
             </a>
         </div>
     </div>
+
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span ariaaria-hidden="true">
+                    &times;
+                </span>
+            </button>
+        </div>
+    }    
 
     <div class = "row">
         <table class="table table-bordered table-striped">
@@ -42,7 +55,14 @@
                         <td>@materia.Area</td>
                         <td>@materia.Creditos</td>
                         <td>
-                            Editar, Borrar
+                            <a class="btn btn-warning"
+                                asp-controller="Materias" asp-action="Edit" asp-route-id="@materia.MateriaId">
+                                Editar
+                            </a>
+                            <a class="btn btn-danger"
+                                asp-controller="Materias" asp-action="Delete" asp-route-id="@materia.MateriaId">
+                                Borrar
+                            </a>
                         </td>
                     </tr>
                 }
