@@ -36,7 +36,47 @@ namespace WebApp.Controllers
             db.materias.Add(materia);
             db.SaveChanges();
             
-            TempData["mensaje"] = "La materia se ha creado correctamente";
+            TempData["mensaje"] = $"La materia {materia.Nombre} se ha creado correctamente";
+
+            return RedirectToAction("Index");
+        }
+
+        // Presenta el formulario con la identidad seleccionada para actualizar
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Materia materia = db.materias.Find(id);
+
+            return View(materia);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Materia materia)
+        {
+            db.materias.Update(materia);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"La materia {materia.Nombre} se ha actualizado correctamente";
+
+            return RedirectToAction("Index");
+        }
+
+        // Presenta el formulario con la identidad seleccionada para borrar
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Materia materia = db.materias.Find(id);
+
+            return View(materia);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Materia materia)
+        {
+            db.materias.Remove(materia);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"La materia {materia.Nombre} se ha borrado correctamente";
 
             return RedirectToAction("Index");
         }
