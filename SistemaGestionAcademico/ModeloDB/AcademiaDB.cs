@@ -1,12 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Modelo.Entidades;
-using System;
 
 namespace ModeloDB
 {
     public class AcademiaDB : DbContext
     {
+        public AcademiaDB(DbContextOptions<AcademiaDB> options)
+            : base(options)
+        {
+
+        }
 
         // Declaración de las entidades del modelo
         public DbSet<Estudiante> estudiantes { get; set; }
@@ -22,12 +25,11 @@ namespace ModeloDB
         public DbSet<Periodo> periodos { get; set; }
         public DbSet<Configuracion> configuracion { get; set; }
 
-        // Configuración de la conección
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            options.UseSqlServer("Server=victor-pc\\sql2012; Initial Catalog=SGA; trusted_connection=true;")
-                .LogTo(Console.WriteLine, LogLevel.Information);
-        }
+        //Configuración de la conección
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //{
+        //    options.UseSqlServer("Server=victor-pc\\sql2012; Initial Catalog=SGA; trusted_connection=true;");
+        //}
 
         // Configurar el modelo de clases
         protected override void OnModelCreating(ModelBuilder model)

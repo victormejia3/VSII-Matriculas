@@ -1,0 +1,59 @@
+﻿@using Modelo.Entidades
+@model IEnumerable<Materia>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Materias</h1>
+<p>Se presenta a continuación la lista de las materias registradas en el sistema SGA</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Lista de materias</h3>
+        </div>
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block"
+                asp-controller ="Materias" asp-action="Create">
+                Crear nueva materia
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nombre</td>
+                    <td>Área</td>
+                    <td>Créditos</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(Materia materia in Model)
+                {
+                    <tr>
+                        <td>@materia.MateriaId</td>
+                        <td>@materia.Nombre</td>
+                        <td>@materia.Area</td>
+                        <td>@materia.Creditos</td>
+                        <td>
+                            <a class="btn btn-warning"
+                               asp-controller="Materias" asp-action="Edit" asp-route-id="@materia.MateriaId" >
+                                Editar
+                            </a>
+                            <a class="btn btn-warning"
+                               asp-controller="Materias" asp-action="Delete" asp-route-id="@materia.MateriaId" >
+                                Borrar
+                            </a>
+                        </td>
+                    </tr>    
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
