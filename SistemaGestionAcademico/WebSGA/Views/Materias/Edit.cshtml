@@ -1,0 +1,48 @@
+﻿@using Modelo.Entidades
+
+@model Materia
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edición de materia</h1>
+<p>Formulario para editar una materia en el sistema académico SGA</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Usted está actualizando la materia: @Model.Nombre</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10">
+
+            <form method="post" asp-action="Edit">
+
+                <input type="hidden" asp-for="MateriaId" />
+
+                <div class="form-group">
+                    <label class="control-label" > Nombre:</label>
+                    <input class="form-control" asp-for="Nombre" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" > Área de conocimiento:</label>
+                    <input class="form-control" asp-for="Area" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" > Número de Créditos:</label>
+                    <input class="form-control" asp-for="Creditos" />
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Actualizar la materia" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
