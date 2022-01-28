@@ -22,6 +22,7 @@ namespace Consola
             var listaSubMallas = (List<Malla>)listas[ListasTipo.SubMallas];
             var listaMallas = (List<Malla>)listas[ListasTipo.Mallas];
             var listaNiveles = (List<Nivel>)listas[ListasTipo.Niveles];
+            var listaCursos = (List<Curso>)listas[ListasTipo.Cursos];
 
             //Grabar
             AcademiaDB db = new AcademiaDB();
@@ -33,6 +34,7 @@ namespace Consola
             db.mallas.AddRange(listaSubMallas);
             db.mallas.AddRange(listaMallas);
             db.niveles.AddRange(listaNiveles);
+            db.cursos.AddRange(listaCursos);
 
             db.SaveChanges();
         }

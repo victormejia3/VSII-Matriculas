@@ -539,17 +539,94 @@ namespace CargaDatos
             // Cursos
             // --------------------------------------------
             #region
-            Curso cur2020_1 = new Curso()
+            // - Nivel 2
+            Curso cur2020_2_DiseWeb = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2020_PAO1,
+                Periodo = p2020_PAO2,
                 Jornada = "Matutino",
-                Materia = matMarkDig,
-                Nombre = "COM-2020-1-MAT Marketing Digital",
+                Materia = matDisenioWeb,
+                Nombre = "COM-2020-2-MAT "+matDisenioWeb.Nombre,
                 FechaInicio = new DateTime(2020, 3, 1),
-                FechaFin = new DateTime(2020, 4, 15)
+                FechaFin = new DateTime(2020, 4, 30)
+            };
+            Curso cur2020_2_ComWeb = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matComunicacionWeb,
+                Nombre = "COM-2020-2-MAT " + matComunicacionWeb.Nombre,
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 4, 30)
+            };
+            Curso cur2020_2_NeuroVen = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matNeuroventas,
+                Nombre = "COM-2020-2-MAT " + matNeuroventas.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            Curso cur2020_2_AdminDB = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matAdminDB,
+                Nombre = "COM-2020-2-MAT " + matAdminDB.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            // - Nivel 3 -----------------------------------
+            Curso cur2021_1_LogProg = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matLogProg,
+                Nombre = "COM-2021-1-MAT " + matLogProg.Nombre,
+                FechaInicio = new DateTime(2021, 3, 1),
+                FechaFin = new DateTime(2021, 4, 30)
+            };
+            Curso cur2021_1_ProdDig = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matProdDig,
+                Nombre = "COM-2021-1-MAT " + matProdDig.Nombre,
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 4, 30)
+            };
+            Curso cur2021_1_FotoRedes = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matFotoRedes,
+                Nombre = "COM-2021-1-MAT " + matFotoRedes.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            Curso cur2021_1_VideoMark = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matVideoMark,
+                Nombre = "COM-2021-1-MAT " + matVideoMark.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
             };
 
+            List<Curso> listaCursos = new List<Curso>()
+            {
+                cur2020_2_DiseWeb, cur2020_2_AdminDB, cur2020_2_ComWeb, cur2020_2_NeuroVen,
+                cur2021_1_FotoRedes, cur2021_1_LogProg, cur2021_1_ProdDig, cur2021_1_VideoMark
+            };
             #endregion
             // --------------------------------------------
             // Diccionario contiene todas las listas
@@ -563,7 +640,8 @@ namespace CargaDatos
                 { ListasTipo.SubMallas, listaSubMallas},
                 { ListasTipo.Mallas,listaMallas },
                 { ListasTipo.Configuracion, listaConfiguracion},
-                { ListasTipo.Niveles, listaNiveles}
+                { ListasTipo.Niveles, listaNiveles},
+                { ListasTipo.Cursos, listaCursos }
             };
 
             return dicListasDatos;
