@@ -22,22 +22,33 @@ namespace CargaDatos
             // --------------------------------------------
             #region
             // Periodo 2020-PA=2
+            Periodo p2020_PAO1 = new Periodo()
+            {
+                Nombre = "2020 PAO1",
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 9, 30),
+                Estado = "Ejecutado"
+            };
+            // Periodo 2020-PAO2
             Periodo p2020_PAO2 = new Periodo()
             {
+                Nombre = "2020 PAO2",
                 FechaInicio = new DateTime(2020, 9, 1),
                 FechaFin = new DateTime(2021, 3, 31),
                 Estado = "Ejecutado"
             };
-            // Periodo 2021-PA=1
+            // Periodo 2021-PAO1
             Periodo p2021_PAO1 = new Periodo()
             {
+                Nombre = "2021 PAO1",
                 FechaInicio = new DateTime(2021, 4, 1),
                 FechaFin = new DateTime(2021, 9, 1),
                 Estado = "Ejecutado"
             };
-            // Periodo 2020-PA=2
+            // Periodo 2021-PAO2
             Periodo p2021_PAO2 = new Periodo()
             {
+                Nombre = "2021 PAO2",
                 FechaInicio = new DateTime(2021, 9, 30),
                 FechaFin = new DateTime(2022, 3, 31),
                 Estado = "Ejecutado"
@@ -367,6 +378,7 @@ namespace CargaDatos
             // --------------------------------------------
             // Niveles
             // --------------------------------------------
+            #region
             // Nivel 1 ************************************
             Nivel nivel10 = new Nivel()
             {
@@ -526,7 +538,145 @@ namespace CargaDatos
                 nivel40, nivel41, nivel42, nivel43,
                 nivel50, nivel51, nivel52, nivel53
             };
+            #endregion
+            // --------------------------------------------
+            // Cursos
+            // --------------------------------------------
+            #region
+            // - Nivel 2
+            Curso cur2020_2_DiseWeb = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matDisenioWeb,
+                Nombre = "COM-2020-2-MAT "+matDisenioWeb.Nombre,
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 4, 30)
+            };
+            Curso cur2020_2_ComWeb = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matComunicacionWeb,
+                Nombre = "COM-2020-2-MAT " + matComunicacionWeb.Nombre,
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 4, 30)
+            };
+            Curso cur2020_2_NeuroVen = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matNeuroventas,
+                Nombre = "COM-2020-2-MAT " + matNeuroventas.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            Curso cur2020_2_AdminDB = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2020_PAO2,
+                Jornada = "Matutino",
+                Materia = matAdminDB,
+                Nombre = "COM-2020-2-MAT " + matAdminDB.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            // - Nivel 3 -----------------------------------
+            Curso cur2021_1_LogProg = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matLogProg,
+                Nombre = "COM-2021-1-MAT " + matLogProg.Nombre,
+                FechaInicio = new DateTime(2021, 3, 1),
+                FechaFin = new DateTime(2021, 4, 30)
+            };
+            Curso cur2021_1_ProdDig = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matProdDig,
+                Nombre = "COM-2021-1-MAT " + matProdDig.Nombre,
+                FechaInicio = new DateTime(2020, 3, 1),
+                FechaFin = new DateTime(2020, 4, 30)
+            };
+            Curso cur2021_1_FotoRedes = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matFotoRedes,
+                Nombre = "COM-2021-1-MAT " + matFotoRedes.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            Curso cur2021_1_VideoMark = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO1,
+                Jornada = "Matutino",
+                Materia = matVideoMark,
+                Nombre = "COM-2021-1-MAT " + matVideoMark.Nombre,
+                FechaInicio = new DateTime(2020, 5, 1),
+                FechaFin = new DateTime(2020, 6, 30)
+            };
+            // - Nivel 4 -----------------------------------
+            Curso cur2021_2_ProgWeb = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO2,
+                Jornada = "Matutino",
+                Materia = matProgWeb,
+                Nombre = "COM-2021-2-MAT " + matProgWeb.Nombre,
+                FechaInicio = new DateTime(2021, 7, 1),
+                FechaFin = new DateTime(2021, 8, 30)
+            };
+            Curso cur2021_2_ELearning = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO2,
+                Jornada = "Matutino",
+                Materia = matELearning,
+                Nombre = "COM-2021-2-MAT " + matELearning.Nombre,
+                FechaInicio = new DateTime(2020, 7, 1),
+                FechaFin = new DateTime(2020, 8, 30)
+            };
+            Curso cur2021_2_NeuroMark = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO2,
+                Jornada = "Matutino",
+                Materia = matNeuroMark,
+                Nombre = "COM-2021-2-MAT " + matNeuroMark.Nombre,
+                FechaInicio = new DateTime(2020, 9, 1),
+                FechaFin = new DateTime(2020, 10, 30)
+            };
+            Curso cur2021_2_EdiVideo = new Curso()
+            {
+                Carrera = carComercio,
+                Periodo = p2021_PAO2,
+                Jornada = "Matutino",
+                Materia = matEdicVideo,
+                Nombre = "COM-2021-12-MAT " + matEdicVideo.Nombre,
+                FechaInicio = new DateTime(2020, 9, 1),
+                FechaFin = new DateTime(2020, 10, 30)
+            };
 
+            List<Curso> listaCursos = new List<Curso>()
+            {
+                // Nivel 2
+                cur2020_2_DiseWeb, cur2020_2_AdminDB, cur2020_2_ComWeb, cur2020_2_NeuroVen,
+                // Nivel 3
+                cur2021_1_FotoRedes, cur2021_1_LogProg, cur2021_1_ProdDig, cur2021_1_VideoMark,
+                // Nivel 4
+                cur2021_2_EdiVideo, cur2021_2_ELearning, cur2021_2_NeuroMark, cur2021_2_ProgWeb
+            };
+            #endregion
             // --------------------------------------------
             // Diccionario contiene todas las listas
             // --------------------------------------------
@@ -539,7 +689,8 @@ namespace CargaDatos
                 { ListasTipo.SubMallas, listaSubMallas},
                 { ListasTipo.Mallas,listaMallas },
                 { ListasTipo.Configuracion, listaConfiguracion},
-                { ListasTipo.Niveles, listaNiveles}
+                { ListasTipo.Niveles, listaNiveles},
+                { ListasTipo.Cursos, listaCursos }
             };
 
             return dicListasDatos;

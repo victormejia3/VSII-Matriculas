@@ -9,6 +9,7 @@ namespace Modelo.Entidades
     public class Periodo : IEntidad
     {
         public int PeriodoId { get; set; }
+        public string Nombre { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
         public string Estado { get; set; } // ABRierto CERrado

@@ -22,10 +22,13 @@ namespace Consola
             var listaSubMallas = (List<Malla>)listas[ListasTipo.SubMallas];
             var listaMallas = (List<Malla>)listas[ListasTipo.Mallas];
             var listaNiveles = (List<Nivel>)listas[ListasTipo.Niveles];
+            var listaCursos = (List<Curso>)listas[ListasTipo.Cursos];
 
-            //Grabar
+            // Prepara la base de datos
             AcademiaDB db = new AcademiaDB();
+            db.PreparaDB();
 
+            // Guarda los datos iniciales
             db.carreras.AddRange(listaCarreras);
             db.periodos.AddRange(listaPeriodos);
             db.materias.AddRange(listaMaterias);
@@ -33,6 +36,7 @@ namespace Consola
             db.mallas.AddRange(listaSubMallas);
             db.mallas.AddRange(listaMallas);
             db.niveles.AddRange(listaNiveles);
+            db.cursos.AddRange(listaCursos);
 
             db.SaveChanges();
         }
