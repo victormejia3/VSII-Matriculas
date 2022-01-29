@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Modelo.Entidades;
 using ModeloDB;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WebApp.Controllers
 {
@@ -18,7 +20,16 @@ namespace WebApp.Controllers
         // Obtiene la lista de cursos y lo envía a la vista
         public IActionResult Index()
         {
-            IEnumerable<Curso> listaCursos = db.cursos;
+            IEnumerable<Curso> listaCursos = 
+                db.cursos
+                    .Include(curso => curso.Carrera)
+                    .Include(curso => curso.Materia);
+
+            // Lista de carreras
+            List<Carrera> listaCarreras = db.carreras.ToList();
+            listaCarreras.Insert(0, new Carrera() { CarreraId = 0, Nombre = "Elije una carrera..." });
+
+            ViewBag.ListofCarreras = listaCarreras;
 
             return View(listaCursos);
         }

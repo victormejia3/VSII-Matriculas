@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Materias</h1>
+<h1>Cursos</h1>
 
 <div class="container">
 
@@ -41,11 +41,15 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr> 
-                        <td>Id</td>
-                        <td>Nombre</td>
-                        <td>Area</td>
-                        <td>Créditos</td>
-                        <td>Acciones</td>
+                        <td>Curso Id</td>
+                        <td>Carrera Id</td>
+                        <td>Carrera</td>
+                        <td>Materia Id</td>
+                        <td>Materia</td>
+                        <td>Período Id</td>
+                        <td>Período</td>
+                        <td>Inicio</td>
+                        <td>Fin</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,6 +61,8 @@
                             <td>@item.Carrera.Nombre</td>
                             <td>@item.MateriaId</td>
                             <td>@item.Materia.Nombre</td>
+                            <td>@item.PeriodoId</td>
+                            <td>@item.Periodo.FechaInicio</td>
                             <td>@item.FechaInicio</td>
                             <td>@item.FechaFin</td>
                             
