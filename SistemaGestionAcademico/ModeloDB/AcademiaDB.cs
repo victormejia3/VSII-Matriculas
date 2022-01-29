@@ -7,10 +7,17 @@ namespace ModeloDB
 {
     public class AcademiaDB : DbContext
     {
-        // Constructor invoca el constructor del padre
-        public AcademiaDB( DbContextOptions<AcademiaDB> options )
-            :base (options)
+        public AcademiaDB(DbContextOptions options)
+            :base(options)
         {
+
+        }
+
+        // Se asegura el borrado y la creación de la base de datos
+        public void PreparaDB()
+        {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         // Declaración de las entidades del modelo
@@ -27,14 +34,12 @@ namespace ModeloDB
         public DbSet<Periodo> periodos { get; set; }
         public DbSet<Configuracion> configuracion { get; set; }
 
-        /*
-        // Configuración de la conección
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            options.UseSqlServer("Server=victor-pc\\sql2012; Initial Catalog=SGA; trusted_connection=true;")
-                .LogTo(Console.WriteLine, LogLevel.Information);
-        }
-        */
+        //// Configuración de la conección
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //{
+        //    options.UseSqlServer("Server=victor-pc\\sql2012; Initial Catalog=SGA; trusted_connection=true;")
+        //        .LogTo(Console.WriteLine, LogLevel.Information);
+        //}
 
         // Configurar el modelo de clases
         protected override void OnModelCreating(ModelBuilder model)
