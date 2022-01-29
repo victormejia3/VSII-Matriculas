@@ -23,7 +23,8 @@ namespace WebApp.Controllers
             IEnumerable<Curso> listaCursos = 
                 db.cursos
                     .Include(curso => curso.Carrera)
-                    .Include(curso => curso.Materia);
+                    .Include(curso => curso.Materia)
+                    .Include(curso => curso.Periodo);
 
             // Lista de carreras
             List<Carrera> listaCarreras = db.carreras.ToList();

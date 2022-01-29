@@ -1,4 +1,5 @@
 ﻿using CargaDatos;
+using Microsoft.EntityFrameworkCore;
 using Modelo.Entidades;
 using ModeloDB;
 using System;
@@ -25,7 +26,10 @@ namespace Consola
             var listaCursos = (List<Curso>)listas[ListasTipo.Cursos];
 
             // Prepara la base de datos
-            AcademiaDB db = new AcademiaDB();
+            var contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
+                .UseSqlServer("Server=victor-pc\\sql2012; Initial Catalog=SGA; trusted_connection=true;")
+                .Options;
+            AcademiaDB db = new AcademiaDB(contextOptions);
             db.PreparaDB();
 
             // Guarda los datos iniciales
