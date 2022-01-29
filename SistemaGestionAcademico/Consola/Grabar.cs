@@ -24,9 +24,11 @@ namespace Consola
             var listaNiveles = (List<Nivel>)listas[ListasTipo.Niveles];
             var listaCursos = (List<Curso>)listas[ListasTipo.Cursos];
 
-            //Grabar
+            // Prepara la base de datos
             AcademiaDB db = new AcademiaDB();
+            db.PreparaDB();
 
+            // Guarda los datos iniciales
             db.carreras.AddRange(listaCarreras);
             db.periodos.AddRange(listaPeriodos);
             db.materias.AddRange(listaMaterias);

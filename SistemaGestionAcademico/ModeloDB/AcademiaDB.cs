@@ -7,6 +7,11 @@ namespace ModeloDB
 {
     public class AcademiaDB : DbContext
     {
+        public void PreparaDB()
+        {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
+        }
 
         // Declaración de las entidades del modelo
         public DbSet<Estudiante> estudiantes { get; set; }
