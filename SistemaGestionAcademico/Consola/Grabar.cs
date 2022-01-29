@@ -1,7 +1,6 @@
 ﻿using CargaDatos;
 using Modelo.Entidades;
 using ModeloDB;
-using System;
 using System.Collections.Generic;
 using static CargaDatos.DatosIniciales;
 
@@ -22,20 +21,24 @@ namespace Consola
             var listaSubMallas = (List<Malla>)listas[ListasTipo.SubMallas];
             var listaMallas = (List<Malla>)listas[ListasTipo.Mallas];
             var listaNiveles = (List<Nivel>)listas[ListasTipo.Niveles];
+            var listaCursos = (List<Curso>)listas[ListasTipo.Cursos];
 
-            //Grabar
-            AcademiaDB db = new AcademiaDB();
-
-            db.carreras.AddRange(listaCarreras);
-            db.periodos.AddRange(listaPeriodos);
-            db.materias.AddRange(listaMaterias);
-            db.configuracion.AddRange(listaConfiguracion);
-            db.mallas.AddRange(listaSubMallas);
-            db.mallas.AddRange(listaMallas);
-            db.niveles.AddRange(listaNiveles);
-
-            db.SaveChanges();
-        }
-        
+            using (AcademiaDB db = AcademiaDBBuilder.Crear())
+            {
+                // Se asegura que se borre y vuelva a crear la base de datos
+                db.PreparaDB(); 
+                // Agrega los listados
+                db.carreras.AddRange(listaCarreras);
+                db.periodos.AddRange(listaPeriodos);
+                db.materias.AddRange(listaMaterias);
+                db.configuracion.AddRange(listaConfiguracion);
+                db.mallas.AddRange(listaSubMallas);
+                db.mallas.AddRange(listaMallas);
+                db.niveles.AddRange(listaNiveles);
+                db.cursos.AddRange(listaCursos);
+                // Guarda todos los datos
+                db.SaveChanges();
+            }            
+        }        
     }
 }
