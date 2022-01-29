@@ -7,12 +7,13 @@ namespace ModeloDB
 {
     public class AcademiaDB : DbContext
     {
-        public AcademiaDB( DbContextOptions<AcademiaDB> options)
+        public AcademiaDB(DbContextOptions options)
             :base(options)
         {
 
         }
 
+        // Se asegura el borrado y la creación de la base de datos
         public void PreparaDB()
         {
             Database.EnsureDeleted();
