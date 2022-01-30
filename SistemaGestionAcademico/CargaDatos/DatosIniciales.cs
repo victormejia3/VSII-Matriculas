@@ -81,7 +81,11 @@ namespace CargaDatos
 
             List<Periodo> listaPeriodos = new List<Periodo>()
             {
+                // 2019
+                p2019_PAO1, p2019_PAO2,
+                // 2020
                 p2020_PAO1, p2020_PAO2,
+                // 2021
                 p2021_PAO1, p2021_PAO2
             };
             #endregion
