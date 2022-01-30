@@ -21,42 +21,68 @@ namespace CargaDatos
             // Lista de Periodos
             // --------------------------------------------
             #region
-            // Periodo 2020-PA=2
+            // -- 2019
+            //    Periodo 2019-PAO1
+            Periodo p2019_PAO1 = new Periodo()
+            {
+                Nombre = "2019 PAO1",
+                Anio = 2019,
+                FechaInicio = new DateTime(2019, 3, 1),
+                FechaFin = new DateTime(2019, 9, 30),
+                Estado = "Ejecutado"
+            };
+            //    Periodo 2019-PAO2
+            Periodo p2019_PAO2 = new Periodo()
+            {
+                Nombre = "2019 PAO2",
+                Anio = 2019,
+                FechaInicio = new DateTime(2019, 9, 1),
+                FechaFin = new DateTime(2019, 3, 31),
+                Estado = "Ejecutado"
+            };
+            // -- 2020
+            //    Periodo 2020-PAO1
             Periodo p2020_PAO1 = new Periodo()
             {
                 Nombre = "2020 PAO1",
+                Anio = 2020,
                 FechaInicio = new DateTime(2020, 3, 1),
                 FechaFin = new DateTime(2020, 9, 30),
                 Estado = "Ejecutado"
             };
-            // Periodo 2020-PAO2
+            //    Periodo 2020-PAO2
             Periodo p2020_PAO2 = new Periodo()
             {
                 Nombre = "2020 PAO2",
+                Anio = 2020,
                 FechaInicio = new DateTime(2020, 9, 1),
                 FechaFin = new DateTime(2021, 3, 31),
                 Estado = "Ejecutado"
             };
-            // Periodo 2021-PAO1
+            // -- 2021
+            //    Periodo 2021-PAO1
             Periodo p2021_PAO1 = new Periodo()
             {
                 Nombre = "2021 PAO1",
+                Anio = 2021,
                 FechaInicio = new DateTime(2021, 4, 1),
                 FechaFin = new DateTime(2021, 9, 1),
                 Estado = "Ejecutado"
             };
-            // Periodo 2021-PAO2
+            //    Periodo 2021-PAO2
             Periodo p2021_PAO2 = new Periodo()
             {
                 Nombre = "2021 PAO2",
+                Anio = 2021,
                 FechaInicio = new DateTime(2021, 9, 30),
                 FechaFin = new DateTime(2022, 3, 31),
-                Estado = "Ejecutado"
+                Estado = "Abierto"
             };
 
             List<Periodo> listaPeriodos = new List<Periodo>()
             {
-                p2020_PAO2,p2021_PAO1,p2021_PAO2
+                p2020_PAO1, p2020_PAO2,
+                p2021_PAO1, p2021_PAO2
             };
             #endregion
             // --------------------------------------------
