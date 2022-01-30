@@ -24,19 +24,27 @@
 
                     <select class="form-control" 
                         asp-for="CarreraId"
-                        asp-items="@ViewBag.ListadeCarreras">
-                            <option value="">--Select--</option>  
+                        asp-items="@ViewBag.selectListaCarreras">
+                            <option value="">--Selecciona una carrera--</option>  
                     </select>
 
                 </div>             
 
                 <div class="form-group">
                     <label class="control-label">Materia</label>
-                    <input class="form-control" asp-for="MateriaId" />
+                    <select class="form-control" 
+                        asp-for="MateriaId"
+                        asp-items="@ViewBag.selectListaMaterias">
+                            <option value="">--Selecciona una materia--</option>  
+                    </select>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Periodo</label>
-                    <input class="form-control" asp-for="PeriodoId" />
+                    <select class="form-control" 
+                        asp-for="PeriodoId"
+                        asp-items="@ViewBag.selectListaPeriodos">
+                            <option value="">--Selecciona un período--</option>  
+                    </select>
                 </div>
 
                 <div class="form-group">
@@ -45,7 +53,13 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label">Jornada</label>
-                    <input class="form-control" asp-for="Jornada" />
+                    <select class="form-control" 
+                        asp-for="Jornada">
+                            <option value="Diurno">Diurno</option>  
+                            <option value="Diurno">Nocturno</option>  
+                    </select>
+
+
                 </div>
                 <div class="form-group">
                     <label class="control-label">FechaInicio</label>

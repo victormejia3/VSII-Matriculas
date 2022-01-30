@@ -41,13 +41,10 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr> 
-
-                        <td>Carrera Id</td>
                         <td>Carrera</td>
-                        <td>Período Id</td>
                         <td>Período</td>
-                        <td>Materia Id</td>
                         <td>Materia</td>
+                        <td>Jornada</td>
                         <td>Curso Id</td>
                         <td>Curso</td>
                         <td>Inicio</td>
@@ -58,12 +55,10 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@item.CarreraId</td>
                             <td>@item.Carrera.Nombre</td>
-                            <td>@item.PeriodoId</td>
                             <td>@item.Periodo.Nombre</td>
-                            <td>@item.MateriaId</td>
-                            <td>@item.Materia.Nombre</td>                            
+                            <td>@item.Materia.Nombre</td>
+                            <td>@item.Jornada</td>
                             <td>@item.CursoId</td>
                             <td>@item.Nombre</td>
                             <td>@item.FechaInicio.ToShortDateString() </td>

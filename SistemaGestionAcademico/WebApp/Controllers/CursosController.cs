@@ -41,10 +41,29 @@ namespace WebApp.Controllers
                     CarreraId = carrera.CarreraId,
                     Nombre=carrera.Nombre
                 }).ToList();
+            // Lista de materias
+            var listaMaterias = db.materias
+                .Select(materias => new
+                {
+                    MateriaId = materias.MateriaId,
+                    Nombre = materias.Nombre
+                }).ToList();
+            // Lista de períodos
+            var listaPeriodos= db.periodos
+                .Select(periodo => new
+                {
+                    PeriodoId = periodo.PeriodoId,
+                    Nombre = periodo.Nombre
+                }).ToList();
 
-            var lista = new SelectList(listaCarreras, "CarreraId", "Nombre");
+            // Prepara las listas
+            var selectListaCarreras = new SelectList(listaCarreras, "CarreraId", "Nombre");
+            var selectListaPeriodos = new SelectList(listaPeriodos, "PeriodoId", "Nombre");
+            var selectListaMaterias = new SelectList(listaMaterias, "MateriaId", "Nombre");
 
-            ViewBag.ListadeCarreras = lista;
+            ViewBag.selectListaCarreras = selectListaCarreras;
+            ViewBag.selectListaPeriodos = selectListaPeriodos;
+            ViewBag.selectListaMaterias = selectListaMaterias;
 
             return View();
         }
@@ -56,7 +75,7 @@ namespace WebApp.Controllers
             db.cursos.Add(curso);
             db.SaveChanges();
 
-            TempData["mensaje"] = $"El curo {curso.Nombre} se ha creado correctamente";
+            TempData["mensaje"] = $"El curso {curso.Nombre} se ha creado correctamente";
 
             return RedirectToAction("Index");
         }
