@@ -17,7 +17,6 @@ namespace WebApp.Controllers
             this.db = db;
         }
 
-
         // Obtiene la lista de cursos y lo envía a la vista
         public IActionResult Index()
         {
