@@ -61,6 +61,11 @@
                             <td>@item.Jornada</td>
                             <td>@item.CursoId</td>
                             <td>@item.Nombre</td>
+                            
+                            @*<td>@Html.DisplayFor(modelItem => item.FechaInicio ) </td>
+                               Se Debe marcar la propiedad en la entidad así:
+                               [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]*@
+
                             <td>@item.FechaInicio.ToShortDateString() </td>
                             <td>@item.FechaFin.ToShortDateString()</td>
                             

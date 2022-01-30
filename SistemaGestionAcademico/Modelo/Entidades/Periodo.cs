@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo.Entidades
 {
@@ -14,11 +11,9 @@ namespace Modelo.Entidades
         public int Anio { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString ="{0:yyy-MM-dd}",ApplyFormatInEditMode =true)]
         public DateTime FechaInicio { get; set; }
         
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime FechaFin { get; set; }
         
         public string Estado { get; set; } // ABRierto CERrado
