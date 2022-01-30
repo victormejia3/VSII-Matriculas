@@ -52,12 +52,13 @@ namespace WebApp.Controllers
                 .Select(periodo => new
                 {
                     PeriodoId = periodo.PeriodoId,
-                    Nombre = periodo.Nombre
+                    Nombre = periodo.Nombre,
+                    Anio = periodo.Anio
                 }).ToList();
 
             // Prepara las listas
             var selectListaCarreras = new SelectList(listaCarreras, "CarreraId", "Nombre");
-            var selectListaPeriodos = new SelectList(listaPeriodos, "PeriodoId", "Nombre");
+            var selectListaPeriodos = new SelectList(listaPeriodos, "PeriodoId", "Nombre", null, "Anio");
             var selectListaMaterias = new SelectList(listaMaterias, "MateriaId", "Nombre");
 
             ViewBag.selectListaCarreras = selectListaCarreras;
