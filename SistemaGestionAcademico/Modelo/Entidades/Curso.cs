@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entidades
 {
-    public enum JornadaTipo { Diurno, Nocturno}
+    public enum JornadaTipo { Diurno, Nocturno, Ejecutivo}
 
     public class Curso
     {
@@ -16,6 +16,7 @@ namespace Modelo.Entidades
 
         [DataType(DataType.Date)]
         public DateTime FechaInicio { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime FechaFin { get; set; }
 
