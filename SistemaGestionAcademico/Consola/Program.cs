@@ -31,6 +31,38 @@ namespace Consola
                         
                     );
                 }
+
+                var listaMatriculas = db.matriculas                    
+                    .Include(matricula => matricula.Estudiante)
+                    .Include(matricula => matricula.Periodo)
+                    .Include(matricula => matricula.Matricula_Dets)
+                        .ThenInclude(matricula_dets => matricula_dets.Curso)
+                    .Include(matricula => matricula.Matricula_Dets)
+                        .ThenInclude(matricula_dets => matricula_dets.Calificacion)
+                    ;
+
+                Console.WriteLine("Lista de Matrículas");
+                foreach(var matricula in listaMatriculas)
+                {
+                    Console.WriteLine(
+                        matricula.MatriculaId + " "+
+                        matricula.EstudianteId + " " +
+                        matricula.Estudiante.Nombre + " " +
+                        matricula.Periodo.Nombre
+                        );
+                    foreach(var dets in matricula.Matricula_Dets)
+                    {
+                        Console.WriteLine(
+                            " - " +
+                            dets.Matricula_DetId + " " +
+                            dets.CursoId + " " +
+                            dets.Curso.Nombre+ " " +
+                            (dets.Calificacion != null ? 
+                                "   - "+dets.Calificacion.Nota1 + " " + dets.Calificacion.Nota2+ " "+ dets.Calificacion.Nota3 
+                                : "   - - - -" )
+                        );
+                    }
+                }
             }
         }
     }
