@@ -23,7 +23,7 @@ namespace CargaDatos
             #region
             // -- 2019
             //    Periodo 2019-PAO1
-            Periodo p2019_PAO1 = new Periodo()
+            Periodo per2019_PAO1 = new Periodo()
             {
                 Nombre = "2019 PAO1",
                 Anio = 2019,
@@ -32,7 +32,7 @@ namespace CargaDatos
                 Estado = PeriodoEstado.Cerrado
             };
             //    Periodo 2019-PAO2
-            Periodo p2019_PAO2 = new Periodo()
+            Periodo per2019_PAO2 = new Periodo()
             {
                 Nombre = "2019 PAO2",
                 Anio = 2019,
@@ -42,7 +42,7 @@ namespace CargaDatos
             };
             // -- 2020
             //    Periodo 2020-PAO1
-            Periodo p2020_PAO1 = new Periodo()
+            Periodo per2020_PAO1 = new Periodo()
             {
                 Nombre = "2020 PAO1",
                 Anio = 2020,
@@ -51,7 +51,7 @@ namespace CargaDatos
                 Estado = PeriodoEstado.Cerrado
             };
             //    Periodo 2020-PAO2
-            Periodo p2020_PAO2 = new Periodo()
+            Periodo per2020_PAO2 = new Periodo()
             {
                 Nombre = "2020 PAO2",
                 Anio = 2020,
@@ -61,7 +61,7 @@ namespace CargaDatos
             };
             // -- 2021
             //    Periodo 2021-PAO1
-            Periodo p2021_PAO1 = new Periodo()
+            Periodo per2021_PAO1 = new Periodo()
             {
                 Nombre = "2021 PAO1",
                 Anio = 2021,
@@ -70,7 +70,7 @@ namespace CargaDatos
                 Estado = PeriodoEstado.Cerrado
             };
             //    Periodo 2021-PAO2
-            Periodo p2021_PAO2 = new Periodo()
+            Periodo per2021_PAO2 = new Periodo()
             {
                 Nombre = "2021 PAO2",
                 Anio = 2021,
@@ -82,11 +82,11 @@ namespace CargaDatos
             List<Periodo> listaPeriodos = new List<Periodo>()
             {
                 // 2019
-                p2019_PAO1, p2019_PAO2,
+                per2019_PAO1, per2019_PAO2,
                 // 2020
-                p2020_PAO1, p2020_PAO2,
+                per2020_PAO1, per2020_PAO2,
                 // 2021
-                p2021_PAO1, p2021_PAO2
+                per2021_PAO1, per2021_PAO2
             };
             #endregion
             // --------------------------------------------
@@ -101,7 +101,7 @@ namespace CargaDatos
                 PesoNota1 = 0.30f,
                 PesoNota2 = 0.35f,
                 PesoNota3 = 0.35f,
-                PeriodoVigente = p2021_PAO2
+                PeriodoVigente = per2021_PAO2
             };
 
             List<Configuracion> listaConfiguracion = new List<Configuracion>()
@@ -577,7 +577,7 @@ namespace CargaDatos
             Curso cur2020_2_DiseWeb = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2020_PAO2,
+                Periodo = per2020_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matDisenioWeb,
                 Nombre = "COM-2020-2-MAT "+matDisenioWeb.Nombre,
@@ -587,7 +587,7 @@ namespace CargaDatos
             Curso cur2020_2_ComWeb = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2020_PAO2,
+                Periodo = per2020_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matComunicacionWeb,
                 Nombre = "COM-2020-2-MAT " + matComunicacionWeb.Nombre,
@@ -597,7 +597,7 @@ namespace CargaDatos
             Curso cur2020_2_NeuroVen = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2020_PAO2,
+                Periodo = per2020_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matNeuroventas,
                 Nombre = "COM-2020-2-MAT " + matNeuroventas.Nombre,
@@ -607,7 +607,7 @@ namespace CargaDatos
             Curso cur2020_2_AdminDB = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2020_PAO2,
+                Periodo = per2020_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matAdminDB,
                 Nombre = "COM-2020-2-MAT " + matAdminDB.Nombre,
@@ -618,7 +618,7 @@ namespace CargaDatos
             Curso cur2021_1_LogProg = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO1,
+                Periodo = per2021_PAO1,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matLogProg,
                 Nombre = "COM-2021-1-MAT " + matLogProg.Nombre,
@@ -628,7 +628,7 @@ namespace CargaDatos
             Curso cur2021_1_ProdDig = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO1,
+                Periodo = per2021_PAO1,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matProdDig,
                 Nombre = "COM-2021-1-MAT " + matProdDig.Nombre,
@@ -638,7 +638,7 @@ namespace CargaDatos
             Curso cur2021_1_FotoRedes = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO1,
+                Periodo = per2021_PAO1,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matFotoRedes,
                 Nombre = "COM-2021-1-MAT " + matFotoRedes.Nombre,
@@ -648,7 +648,7 @@ namespace CargaDatos
             Curso cur2021_1_VideoMark = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO1,
+                Periodo = per2021_PAO1,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matVideoMark,
                 Nombre = "COM-2021-1-MAT " + matVideoMark.Nombre,
@@ -659,7 +659,7 @@ namespace CargaDatos
             Curso cur2021_2_ProgWeb = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO2,
+                Periodo = per2021_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matProgWeb,
                 Nombre = "COM-2021-2-MAT " + matProgWeb.Nombre,
@@ -669,7 +669,7 @@ namespace CargaDatos
             Curso cur2021_2_ELearning = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO2,
+                Periodo = per2021_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matELearning,
                 Nombre = "COM-2021-2-MAT " + matELearning.Nombre,
@@ -679,7 +679,7 @@ namespace CargaDatos
             Curso cur2021_2_NeuroMark = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO2,
+                Periodo = per2021_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matNeuroMark,
                 Nombre = "COM-2021-2-MAT " + matNeuroMark.Nombre,
@@ -689,7 +689,7 @@ namespace CargaDatos
             Curso cur2021_2_EdiVideo = new Curso()
             {
                 Carrera = carComercio,
-                Periodo = p2021_PAO2,
+                Periodo = per2021_PAO2,
                 Jornada = JornadaTipo.Diurno,
                 Materia = matEdicVideo,
                 Nombre = "COM-2021-12-MAT " + matEdicVideo.Nombre,
@@ -707,6 +707,361 @@ namespace CargaDatos
                 cur2021_2_EdiVideo, cur2021_2_ELearning, cur2021_2_NeuroMark, cur2021_2_ProgWeb
             };
             #endregion
+
+            // --------------------------------------------
+            // Matrículas
+            // --------------------------------------------
+            #region
+            // [] ---------------------------------------------------------------
+            Matricula matPedro_2020_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estPedro,
+                Fecha = new DateTime(2020, 1, 1),
+                Periodo = per2020_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_DiseWeb,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 5.55f, Nota2 = 4.34f, Nota3 = 5.74f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_AdminDB,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 8.78f, Nota2 = 7.12f, Nota3 = 6.25f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matPedro_2021_PAO1 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estPedro,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO1,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_LogProg,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 6.65f, Nota2 = 8.94f, Nota3 = 9.74f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_ProdDig,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.84f, Nota2 = 9.12f, Nota3 = 8.50f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_VideoMark,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 4.84f, Nota2 = 5.12f, Nota3 = 8.50f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matPedro_2021_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Pendiente,
+                Estudiante = estPedro,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ProgWeb
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ELearning
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matJose_2020_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estJose,
+                Fecha = new DateTime(2020, 1, 1),
+                Periodo = per2020_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_DiseWeb,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 8.55f, Nota2 = 8.34f, Nota3 = 8.74f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_AdminDB,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 8.78f, Nota2 = 9.33f, Nota3 = 6.27f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matJose_2021_PAO1 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estJose,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO1,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_LogProg,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 6.89f, Nota2 = 6.82f, Nota3 = 7.34f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_ProdDig,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.84f, Nota2 = 4.12f, Nota3 = 5.50f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_VideoMark,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 9.84f, Nota2 = 8.12f, Nota3 = 7.37f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matJose_2021_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Pendiente,
+                Estudiante = estJose,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ProgWeb
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ELearning
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matMaria_2020_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estMaria,
+                Fecha = new DateTime(2020, 1, 1),
+                Periodo = per2020_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_DiseWeb,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.02f, Nota2 = 7.24f, Nota3 = 6.69f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_AdminDB,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.48f, Nota2 = 6.42f, Nota3 = 8.27f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matMaria_2021_PAO1 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estMaria,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO1,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_LogProg,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 9.12f, Nota2 = 7.33f, Nota3 = 7.25f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_VideoMark,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.84f, Nota2 = 7.12f, Nota3 = 8.50f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matMaria_2021_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Pendiente,
+                Estudiante = estMaria,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ProgWeb
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ELearning
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matKarla_2020_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estKarla,
+                Fecha = new DateTime(2020, 1, 1),
+                Periodo = per2020_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_DiseWeb,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 6.02f, Nota2 = 6.24f, Nota3 = 6.69f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_AdminDB,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.48f, Nota2 = 7.42f, Nota3 = 7.27f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matKarla_2021_PAO1 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Aprobada,
+                Estudiante = estKarla,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO1,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2020_2_DiseWeb,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 8.02f, Nota2 = 8.24f, Nota3 = 7.69f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_LogProg,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 6.12f, Nota2 = 7.33f, Nota3 = 8.25f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_VideoMark,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 7.84f, Nota2 = 7.12f, Nota3 = 8.50f
+                        }
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_1_ProdDig,
+                        Calificacion = new Calificacion()
+                        {
+                            Nota1 = 8.41f, Nota2 = 7.12f, Nota3 = 7.50f
+                        }
+                    }
+                }
+            };
+            // [] ---------------------------------------------------------------
+            Matricula matKarla_2021_PAO2 = new Matricula()
+            {
+                Carrera = carComercio,
+                Estado = MatriculaEstado.Pendiente,
+                Estudiante = estKarla,
+                Fecha = new DateTime(2021, 1, 1),
+                Periodo = per2021_PAO2,
+                Matricula_Dets = new List<Matricula_Det>()
+                {
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ProgWeb
+                    },
+                    new Matricula_Det()
+                    {
+                        Curso=cur2021_2_ELearning
+                    }
+                }
+            };
+
+            var listaMatriculas = new List<Matricula>()
+            {
+                // Matrículas de Pedro
+                matPedro_2020_PAO2, matPedro_2021_PAO1, matPedro_2021_PAO2,
+                // Matrículas de José
+                matJose_2020_PAO2, matJose_2021_PAO1, matJose_2021_PAO2,
+                // Matrículas de María
+                matMaria_2020_PAO2, matMaria_2021_PAO1, matMaria_2021_PAO2,
+                // Matrículas de Karla
+                matKarla_2020_PAO2, matKarla_2021_PAO1, matKarla_2021_PAO2
+            };
+            #endregion
+
             // --------------------------------------------
             // Diccionario contiene todas las listas
             // --------------------------------------------
@@ -720,7 +1075,8 @@ namespace CargaDatos
                 { ListasTipo.Mallas,listaMallas },
                 { ListasTipo.Configuracion, listaConfiguracion},
                 { ListasTipo.Niveles, listaNiveles},
-                { ListasTipo.Cursos, listaCursos }
+                { ListasTipo.Cursos, listaCursos },
+                { ListasTipo.Matriculas, listaMatriculas }
             };
 
             return dicListasDatos;
