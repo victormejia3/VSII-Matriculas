@@ -15,17 +15,16 @@ namespace Consola
             // Lee la configuración acerca de qué base usar del archivo App.config
             string dbtipo = ConfigurationManager.AppSettings[DBTipo];
             string conn = ConfigurationManager.ConnectionStrings[dbtipo].ConnectionString;
-
+            // Construye la conección acorde con el tipo
             DbContextOptions<AcademiaDB> contextOptions;
-
             switch (dbtipo)
             {
-                case "SqlServer":
+                case nameof(DBTipoConn.SqlServer) :
                     contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
                         .UseSqlServer(conn)
                         .Options;
                     break;
-                case "Postgres":
+                case nameof(DBTipoConn.Postgres):
                     contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
                         .UseNpgsql(conn)
                         .Options;
