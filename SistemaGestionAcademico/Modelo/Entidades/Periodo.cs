@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Modelo.Entidades
 {
+    public enum EstadosPeriodo { Abierto, Cerrado}
+
     public class Periodo : IEntidad
     {
         public int PeriodoId { get; set; }
@@ -16,7 +18,8 @@ namespace Modelo.Entidades
         [DataType(DataType.Date)]
         public DateTime FechaFin { get; set; }
         
-        public string Estado { get; set; } // ABRierto CERrado
+        public EstadosPeriodo Estado { get; set; } // ABRierto CERrado
+
         // Relación con los cursos abiertos en un período
         public List<Curso> Cursos { get; set; }
         // Relación con las matrículas realizadas en un período
