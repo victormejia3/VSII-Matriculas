@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entidades
 {
-    public enum EstadosPeriodo { Abierto, Cerrado}
+    public enum PeriodoEstado { Abierto, Cerrado}
 
     public class Periodo : IEntidad
     {
@@ -23,7 +23,7 @@ namespace Modelo.Entidades
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime FechaFin { get; set; }
         
-        public EstadosPeriodo Estado { get; set; } // ABRierto CERrado
+        public PeriodoEstado Estado { get; set; } // ABRierto CERrado
 
         // Relación con los cursos abiertos en un período
         public List<Curso> Cursos { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entidades
 {
-    public enum EstadosMatricula { Pendiente, Aprobada, Rechazada, Anulada}
+    public enum MatriculaEstado { Pendiente, Aprobada, Rechazada, Anulada}
 
     public class Matricula
     {
@@ -15,7 +15,8 @@ namespace Modelo.Entidades
         public int MatriculaId { get; set; }
         [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
-        public EstadosMatricula Estado { get; set; }   // PENdiente, APRobada, ANUlada
+        public MatriculaEstado Estado { get; set; }
+
         // Relación con el estudiante
         public int EstudianteId { get; set; }
         public Estudiante Estudiante { get; set; }

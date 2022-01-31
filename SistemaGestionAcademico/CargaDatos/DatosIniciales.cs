@@ -29,7 +29,7 @@ namespace CargaDatos
                 Anio = 2019,
                 FechaInicio = new DateTime(2019, 3, 1),
                 FechaFin = new DateTime(2019, 9, 30),
-                Estado = EstadosPeriodo.Cerrado
+                Estado = PeriodoEstado.Cerrado
             };
             //    Periodo 2019-PAO2
             Periodo p2019_PAO2 = new Periodo()
@@ -38,7 +38,7 @@ namespace CargaDatos
                 Anio = 2019,
                 FechaInicio = new DateTime(2019, 9, 1),
                 FechaFin = new DateTime(2019, 3, 31),
-                Estado = EstadosPeriodo.Cerrado
+                Estado = PeriodoEstado.Cerrado
             };
             // -- 2020
             //    Periodo 2020-PAO1
@@ -48,7 +48,7 @@ namespace CargaDatos
                 Anio = 2020,
                 FechaInicio = new DateTime(2020, 3, 1),
                 FechaFin = new DateTime(2020, 9, 30),
-                Estado = EstadosPeriodo.Cerrado
+                Estado = PeriodoEstado.Cerrado
             };
             //    Periodo 2020-PAO2
             Periodo p2020_PAO2 = new Periodo()
@@ -57,7 +57,7 @@ namespace CargaDatos
                 Anio = 2020,
                 FechaInicio = new DateTime(2020, 9, 1),
                 FechaFin = new DateTime(2021, 3, 31),
-                Estado = EstadosPeriodo.Cerrado
+                Estado = PeriodoEstado.Cerrado
             };
             // -- 2021
             //    Periodo 2021-PAO1
@@ -67,7 +67,7 @@ namespace CargaDatos
                 Anio = 2021,
                 FechaInicio = new DateTime(2021, 4, 1),
                 FechaFin = new DateTime(2021, 9, 1),
-                Estado = EstadosPeriodo.Cerrado
+                Estado = PeriodoEstado.Cerrado
             };
             //    Periodo 2021-PAO2
             Periodo p2021_PAO2 = new Periodo()
@@ -76,7 +76,7 @@ namespace CargaDatos
                 Anio = 2021,
                 FechaInicio = new DateTime(2021, 9, 30),
                 FechaFin = new DateTime(2022, 3, 31),
-                Estado = EstadosPeriodo.Abierto
+                Estado = PeriodoEstado.Abierto
             };
 
             List<Periodo> listaPeriodos = new List<Periodo>()
@@ -578,7 +578,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2020_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matDisenioWeb,
                 Nombre = "COM-2020-2-MAT "+matDisenioWeb.Nombre,
                 FechaInicio = new DateTime(2020, 3, 1),
@@ -588,7 +588,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2020_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matComunicacionWeb,
                 Nombre = "COM-2020-2-MAT " + matComunicacionWeb.Nombre,
                 FechaInicio = new DateTime(2020, 3, 1),
@@ -598,7 +598,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2020_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matNeuroventas,
                 Nombre = "COM-2020-2-MAT " + matNeuroventas.Nombre,
                 FechaInicio = new DateTime(2020, 5, 1),
@@ -608,7 +608,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2020_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matAdminDB,
                 Nombre = "COM-2020-2-MAT " + matAdminDB.Nombre,
                 FechaInicio = new DateTime(2020, 5, 1),
@@ -619,7 +619,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO1,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matLogProg,
                 Nombre = "COM-2021-1-MAT " + matLogProg.Nombre,
                 FechaInicio = new DateTime(2021, 3, 1),
@@ -629,7 +629,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO1,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matProdDig,
                 Nombre = "COM-2021-1-MAT " + matProdDig.Nombre,
                 FechaInicio = new DateTime(2020, 3, 1),
@@ -639,7 +639,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO1,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matFotoRedes,
                 Nombre = "COM-2021-1-MAT " + matFotoRedes.Nombre,
                 FechaInicio = new DateTime(2020, 5, 1),
@@ -649,7 +649,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO1,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matVideoMark,
                 Nombre = "COM-2021-1-MAT " + matVideoMark.Nombre,
                 FechaInicio = new DateTime(2020, 5, 1),
@@ -660,7 +660,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matProgWeb,
                 Nombre = "COM-2021-2-MAT " + matProgWeb.Nombre,
                 FechaInicio = new DateTime(2021, 7, 1),
@@ -670,7 +670,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matELearning,
                 Nombre = "COM-2021-2-MAT " + matELearning.Nombre,
                 FechaInicio = new DateTime(2020, 7, 1),
@@ -680,7 +680,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matNeuroMark,
                 Nombre = "COM-2021-2-MAT " + matNeuroMark.Nombre,
                 FechaInicio = new DateTime(2020, 9, 1),
@@ -690,7 +690,7 @@ namespace CargaDatos
             {
                 Carrera = carComercio,
                 Periodo = p2021_PAO2,
-                Jornada = "Matutino",
+                Jornada = JornadaTipo.Diurno,
                 Materia = matEdicVideo,
                 Nombre = "COM-2021-12-MAT " + matEdicVideo.Nombre,
                 FechaInicio = new DateTime(2020, 9, 1),

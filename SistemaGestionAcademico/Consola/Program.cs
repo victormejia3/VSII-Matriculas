@@ -23,9 +23,12 @@ namespace Consola
                 {
                     Console.WriteLine(
                         curso.Carrera.Nombre + " " +
-                        curso.Materia.Nombre + "\t\t\t" +
-                        curso.Periodo.Nombre + "\t" +
+                        curso.Periodo.Nombre + " " +
+                        curso.Periodo.Estado + " " +
+                        curso.Jornada + " " +
+                        curso.Materia.Nombre + " " +
                         curso.Nombre
+                        
                     );
                 }
             }
