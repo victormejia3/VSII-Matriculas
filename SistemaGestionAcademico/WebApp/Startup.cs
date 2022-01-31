@@ -24,9 +24,32 @@ namespace WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string DBTipo = Configuration["DBTipo"];
+            string DBConnStr = Configuration.GetConnectionString(DBTipo);
+            DbContextOptions<AcademiaDB> contextOptions;
+
+            switch (DBTipo)
+            {
+                case "SqlServer":
+                    contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
+                        .UseSqlServer(DBConnStr)
+                        .Options;
+                    break;
+                case "Postgres":
+                    contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
+                        .UseNpgsql(DBConnStr)
+                        .Options;
+                    break;
+                default: // Por defecto usa la memoria como base de datos
+                    contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
+                        .UseInMemoryDatabase(DBConnStr)
+                        .Options;
+                    break;
+            }
+
             services.AddDbContext<AcademiaDB>(options =>
                 options.UseSqlServer(
-                    "Server=victor-pc\\sql2012; Initial Catalog=SGA; trusted_connection=true;"
+                    Configuration.GetConnectionString("SqlServer")
                 )
             );
 
