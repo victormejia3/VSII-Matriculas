@@ -54,9 +54,7 @@
                 <div class="form-group">
                     <label class="control-label">Jornada</label>
                     <select class="form-control" 
-                        asp-for="Jornada">
-                            <option value="Diurno">Diurno</option>  
-                            <option value="Diurno">Nocturno</option>  
+                        asp-for="Jornada" asp-items="Html.GetEnumSelectList<JornadaTipo>()" >
                     </select>
 
 
