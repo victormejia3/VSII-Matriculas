@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,9 @@ namespace Modelo.Entidades
     {
         public int CursoId { get; set; }
         public string Nombre { get; set; }
+        [DataType(DataType.Date)]
         public DateTime FechaInicio { get; set; }
+        [DataType(DataType.Date)]
         public DateTime FechaFin { get; set; }
         public string Jornada { get; set; }
         // Relación con la carrera

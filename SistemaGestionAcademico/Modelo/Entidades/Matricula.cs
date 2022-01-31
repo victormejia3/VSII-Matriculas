@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modelo.Entidades
 {
+    public enum EstadosMatricula { Pendiente, Aprobada, Rechazada, Anulada}
+
     public class Matricula
     {
         // Datos generales
         public int MatriculaId { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
-        public string Estado { get; set; }   // PENdiente, APRobada, ANUlada
+        public EstadosMatricula Estado { get; set; }   // PENdiente, APRobada, ANUlada
         // Relación con el estudiante
         public int EstudianteId { get; set; }
         public Estudiante Estudiante { get; set; }
