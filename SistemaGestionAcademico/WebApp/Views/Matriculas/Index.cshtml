@@ -1,7 +1,8 @@
 ﻿@using Modelo.Entidades
 @model IEnumerable<Matricula>
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Matrículas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -26,12 +27,6 @@
         <div class="col-sm-6">
             <h3>Lista de Matrículas</h3>
         </div>
-        <div class="col-sm-6">
-            <a class="btn btn-success d-block"
-                asp-controller="Materias" asp-action="Create" >
-                Procesar Matrículas
-            </a>
-        </div>
     </div>
 
     <div class="row">
@@ -40,25 +35,28 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr> 
-                        <td>Id</td>
-                        <td>Nombre</td>
-                        <td>Area</td>
-                        <td>Créditos</td>
-                        <td>Acciones</td>
+                        <td>Matrícula Id</td>
+                        <td>Carrera</td>
+                        <td>Año</td>
+                        <td>Período</td>
+                        <td>Estudiante</td>
+                        <td>Estado</td>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@item.Estudiante.Nombre</td>
+                            <td>@item.MatriculaId</td>
+                            <td>@item.Carrera.Nombre</td>
+                            <td>@item.Periodo.Anio</td>
                             <td>@item.Periodo.Nombre</td>
-                            <td>@item.Fecha</td>
+                            <td>@item.Estudiante.Nombre</td>
                             <td>@item.Estado</td>
                             <td>
                                 <a class="btn btn-warning"
-                                    asp-controller="Matriculas" asp-action="Edit" asp-route-id="@item.MatriculaId">
-                                    Procesar
+                                    asp-controller="Matriculas" asp-action="Validar" asp-route-id="@item.MatriculaId">
+                                    Ver
                                 </a>
                             </td>
                         </tr>
@@ -68,4 +66,3 @@
         }
     </div>
 </div>
-

@@ -38,7 +38,7 @@ namespace WebApp.Controllers
                 .Select(carrera => new
                 {
                     CarreraId = carrera.CarreraId,
-                    Nombre=carrera.Nombre
+                    Nombre = carrera.Nombre
                 }).ToList();
             // Lista de materias
             var listaMaterias = db.materias
@@ -61,9 +61,10 @@ namespace WebApp.Controllers
             var selectListaPeriodos = new SelectList(listaPeriodos, "PeriodoId", "Nombre", null, "Anio");
             var selectListaMaterias = new SelectList(listaMaterias, "MateriaId", "Nombre");
 
-            ViewBag.selectListaCarreras = selectListaCarreras;
-            ViewBag.selectListaPeriodos = selectListaPeriodos;
-            ViewBag.selectListaMaterias = selectListaMaterias;
+            // Ingreso a ViewBag
+            ViewBag.selectListCarreras = selectListaCarreras;
+            ViewBag.selectListPeriodos = selectListaPeriodos;
+            ViewBag.selectListMaterias = selectListaMaterias;
 
             return View();
         }
