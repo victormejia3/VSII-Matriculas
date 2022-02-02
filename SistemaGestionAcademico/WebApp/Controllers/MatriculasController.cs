@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Modelo.Operaciones;
 using ModeloDB;
 using System.Linq;
 
@@ -41,6 +42,11 @@ namespace WebApp.Controllers
                         .ThenInclude(curso => curso.Materia)
                 .Single(matricula => matricula.MatriculaId == id)   // Consulta la mátricula id
                 ;
+
+            // Preparo la clase para calcular la nota final
+            var configuracion = db.configuracion.Single();
+            CalcCalificaciones calcCalificaciones = new CalcCalificaciones(configuracion);
+            ViewBag.CalcCalificaciones = calcCalificaciones;
 
             return View(matricula);
         }

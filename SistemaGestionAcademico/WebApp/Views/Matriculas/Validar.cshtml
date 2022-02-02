@@ -60,6 +60,8 @@
                                 <td>@item.Calificacion.Nota1</td>
                                 <td>@item.Calificacion.Nota2</td>
                                 <td>@item.Calificacion.Nota3</td>
+                                <td>@ViewBag.CalcCalificaciones.NotaFinal(item.Calificacion)</td>
+                                <td>@ViewBag.CalcCalificaciones.Aprobado(item.Calificacion)</td>
                             </tr>
                         }
                     </tbody>
