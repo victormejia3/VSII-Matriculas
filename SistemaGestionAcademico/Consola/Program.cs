@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using Procesos;
 using System.Linq;
 
 namespace Consola
@@ -13,18 +12,12 @@ namespace Consola
 
             using(var db = AcademiaDBBuilder.Crear())
             {
-                // Operación de proyección
-                var listaCarreras = db.carreras
-                    .Select(carrera =>
-                     new {
-                        carrera.CarreraId,
-                        carrera.Nombre
-                    });
+                var matProgWeb = db.materias
+                    .Single(materia => materia.Nombre=="Programación Web");
 
-                foreach(var carrera in listaCarreras)
-                {
-                    Console.WriteLine(carrera.CarreraId + " " +carrera.Nombre );
-                }
+                ProPrerequisitos opPrerequisitos = new ProPrerequisitos();
+
+                var lista = opPrerequisitos.Prerequisitos(matProgWeb);
             }
         }
     }

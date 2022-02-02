@@ -43,9 +43,10 @@ namespace WebApp.Controllers
                 .Single(matricula => matricula.MatriculaId == id)   // Consulta la mátricula id
                 ;
 
-            // Preparo la clase para calcular la nota final
+            // Preparar la clase para el cálculo de las calificaciones
             var configuracion = db.configuracion.Single();
             CalcCalificaciones calcCalificaciones = new CalcCalificaciones(configuracion);
+
             ViewBag.CalcCalificaciones = calcCalificaciones;
 
             return View(matricula);

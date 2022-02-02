@@ -14,7 +14,7 @@ namespace Modelo.Operaciones
         public float peso3 { get; set; }
         public float notaMinima { get; set; }
 
-        public CalcCalificaciones( Configuracion configuracion)
+        public CalcCalificaciones(Configuracion configuracion)
         {
             this.peso1 = configuracion.PesoNota1;
             this.peso2 = configuracion.PesoNota2;
@@ -22,16 +22,16 @@ namespace Modelo.Operaciones
             this.notaMinima = configuracion.NotaMinima;
         }
 
-        public float NotaFinal(Calificacion calificacion )
+        public float NotaFinal(Calificacion calificacion)
         {
             float respuesta;
 
             respuesta =
-                peso1 * calificacion.Nota1 +
-                peso2 * calificacion.Nota2 +
-                peso3 * calificacion.Nota3;
+                calificacion.Nota1 * peso1 +
+                calificacion.Nota2 * peso2 +
+                calificacion.Nota3 * peso3;
 
-            respuesta = (float) Math.Round((double) respuesta,2);
+            respuesta = (float) Math.Round((double) respuesta, 2);
 
             return respuesta;
         }

@@ -48,6 +48,8 @@
                             <td>Nota 1</td>
                             <td>Nota 2</td>
                             <td>Nota 3</td>
+                            <td>Nota Final</td>
+                            <td>Aprobado</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,16 +59,31 @@
                                 <td>@item.Curso.Nombre</td>
                                 <td>@item.Curso.Materia.Nombre</td>
                                 <td>@item.Curso.Jornada</td>
+                            @if(item.Calificacion != null)
+                            {
                                 <td>@item.Calificacion.Nota1</td>
                                 <td>@item.Calificacion.Nota2</td>
                                 <td>@item.Calificacion.Nota3</td>
                                 <td>@ViewBag.CalcCalificaciones.NotaFinal(item.Calificacion)</td>
                                 <td>@ViewBag.CalcCalificaciones.Aprobado(item.Calificacion)</td>
+                            }
+                            else
+                            {
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            }
+
                             </tr>
                         }
                     </tbody>
                 </table>
         </div>
     </div>
+
+
+
 </div>
 
