@@ -7,7 +7,7 @@ namespace WebApp.Controllers
 {
     public class MatriculasController : Controller
     {
-        // La instancia del DBContext
+        // DbContext
         private readonly AcademiaDB db;
 
         public MatriculasController(AcademiaDB db)
@@ -18,21 +18,19 @@ namespace WebApp.Controllers
         // Listado de matrículas
         public IActionResult Index()
         {
-            // Consultar la lista de matrículas
             var listaMatriculas = db.matriculas
                 .Include(matricula => matricula.Carrera)
                 .Include(matricula => matricula.Estudiante)
-                .Include(matricula => matricula.Periodo);
+                .Include(matricula => matricula.Periodo)
+                ;
 
             return View(listaMatriculas);
         }
 
-        // Formulario de validación de matrículas
-        [HttpGet]
+        // Pantalla para la validación de la matrícula
         public IActionResult Validar(int id)
         {
-            // Consultar la matrícula
-            var modeloMatricula = db.matriculas
+            var matricula = db.matriculas
                 .Include(matricula => matricula.Carrera)
                 .Include(matricula => matricula.Estudiante)
                 .Include(matricula => matricula.Periodo)
@@ -41,9 +39,11 @@ namespace WebApp.Controllers
                 .Include(matricula => matricula.Matricula_Dets)
                     .ThenInclude(matricula_dets => matricula_dets.Curso)
                         .ThenInclude(curso => curso.Materia)
-                .Single(matricula => matricula.MatriculaId == id);
+                .Single(matricula => matricula.MatriculaId == id)   // Consulta la mátricula id
+                ;
 
-            return View(modeloMatricula);
+            return View(matricula);
         }
+
     }
 }
