@@ -365,13 +365,13 @@ namespace CargaDatos
 
             Prerequisito preELearning_ProdDig = new Prerequisito()
             {
-                Malla = malProgWeb,
+                Malla = malELearning,
                 Materia = matProdDig
             };
 
             Prerequisito preELearning_VidMark = new Prerequisito()
             {
-                Malla = malProgWeb,
+                Malla = malELearning,
                 Materia = matVideoMark
             };
 
@@ -385,7 +385,7 @@ namespace CargaDatos
 
             Prerequisito preProdDig_ComWeb = new Prerequisito()
             {
-                Malla = malProgWeb,
+                Malla = malProdDig,
                 Materia = matComunicacionWeb
             };
 
@@ -403,6 +403,13 @@ namespace CargaDatos
             List<Malla> listaMallas = new List<Malla>()
             {
                 mallaComerio
+            };
+
+
+            List<Prerequisito> listaPrerequisitos = new List<Prerequisito>()
+            {
+                preELearning_ProdDig, preELearning_VidMark, preProdDig_ComWeb,
+                preProgWeb_AdminDB, preProgWeb_DisWeb, preProgWeb_LogProg
             };
             #endregion
             // --------------------------------------------
@@ -1076,7 +1083,9 @@ namespace CargaDatos
                 { ListasTipo.Configuracion, listaConfiguracion},
                 { ListasTipo.Niveles, listaNiveles},
                 { ListasTipo.Cursos, listaCursos },
-                { ListasTipo.Matriculas, listaMatriculas }
+                { ListasTipo.Matriculas, listaMatriculas },
+                { ListasTipo.Prerequisitos, listaPrerequisitos }
+                
             };
 
             return dicListasDatos;

@@ -23,6 +23,7 @@ namespace Consola
             var listaNiveles = (List<Nivel>)listas[ListasTipo.Niveles];
             var listaCursos = (List<Curso>)listas[ListasTipo.Cursos];
             var listaMatriculas = (List<Matricula>)listas[ListasTipo.Matriculas];
+            var listaPrerequisitos = (List<Prerequisito>)listas[ListasTipo.Prerequisitos];
 
             using (AcademiaDB db = AcademiaDBBuilder.Crear())
             {
@@ -38,6 +39,7 @@ namespace Consola
                 db.niveles.AddRange(listaNiveles);
                 db.cursos.AddRange(listaCursos);
                 db.matriculas.AddRange(listaMatriculas);
+                db.prerequisitos.AddRange(listaPrerequisitos);
                 // Guarda todos los datos
                 db.SaveChanges();
             }            

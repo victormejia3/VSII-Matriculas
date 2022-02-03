@@ -1,4 +1,5 @@
 ﻿using Procesos;
+using System;
 using System.Linq;
 
 namespace Consola
@@ -12,12 +13,25 @@ namespace Consola
 
             using(var db = AcademiaDBBuilder.Crear())
             {
-                var matProgWeb = db.materias
-                    .Single(materia => materia.Nombre=="Programación Web");
+                var tmpMateria = db.materias
+                    .Single(materia => materia.Nombre== "Neuromarketing");
 
-                ProPrerequisitos opPrerequisitos = new ProPrerequisitos();
+                ProPrerequisitos opPrerequisitos = new ProPrerequisitos(db);
 
-                var lista = opPrerequisitos.Prerequisitos(matProgWeb);
+                var lista = opPrerequisitos.Prerequisitos(tmpMateria);
+
+                Console.WriteLine("Los prerequisitos de: "+ tmpMateria.Nombre + " son:");
+                if (lista == null)
+                {
+                    Console.WriteLine("No tiene prerequisitos");
+                } 
+                else
+                {
+                    foreach (var item in lista)
+                    {
+                        Console.WriteLine(item.MateriaId + " " + item.Nombre);
+                    }
+                }                
             }
         }
     }
