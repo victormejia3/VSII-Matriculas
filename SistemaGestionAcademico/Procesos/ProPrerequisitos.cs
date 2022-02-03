@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using Modelo.Entidades;
 using ModeloDB;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace Procesos
 {
     public class ProPrerequisitos
     {
-        public AcademiaDB db { get; set; }
+        readonly AcademiaDB db;
 
         public ProPrerequisitos(AcademiaDB db)
         {
@@ -19,22 +20,26 @@ namespace Procesos
         {
             var prerequisitos = new List<Materia>();
 
+            // Consultar la materia
             var tmpMateria = db.materias
                 .Include(mat => mat.Malla)
-                .Single(mat => mat.MateriaId == materia.MateriaId);
+                .Single(mat => mat.MateriaId == materia.MateriaId );
 
-            if( tmpMateria.Malla == null) return null;
+            // Si no tiene malla, entonces no tiene prerequisitos
+            if (tmpMateria.Malla == null) return null;
 
-            var tmpMalla = db.mallas
-                .Include(malla => malla.PreRequisitos)
-                    .ThenInclude(prerequisitos => prerequisitos.Materia)
-                .Single(malla => malla.MallaId == tmpMateria.Malla.MallaId);
+            // Consultar los prerequisitos
+            var tmpPreReq = db.prerequisitos
+                .Include(pre => pre.Materia)
+                .Where(pre => pre.MallaId == tmpMateria.Malla.MallaId);
 
-            if (tmpMalla.PreRequisitos == null) return null;
+            // Si no tiene prerequisitos, retorna null
+            if (tmpPreReq == null) return null;
 
-            foreach(var prereq in tmpMalla.PreRequisitos)
+            // Preparo la lista de materias
+            foreach(var pre in tmpPreReq)
             {
-                prerequisitos.Add(prereq.Materia);
+                prerequisitos.Add(pre.Materia);
             }
                 
             return prerequisitos;

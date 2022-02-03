@@ -1,4 +1,7 @@
-﻿using Modelo.Entidades;
+﻿using Microsoft.EntityFrameworkCore;
+using Modelo.Entidades;
+using Modelo.Operaciones;
+using ModeloDB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +12,12 @@ namespace Procesos
 {
     public class ProAprobaciones
     {
+
         public bool Aprobo(Estudiante estudiante, Materia materia)
         {
-            return true;
+
+
+            return false;
         }
 
     }

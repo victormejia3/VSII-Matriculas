@@ -14,11 +14,13 @@ namespace Consola
             using(var db = AcademiaDBBuilder.Crear())
             {
                 var tmpMateria = db.materias
-                    .Single(materia => materia.Nombre== "Neuromarketing");
+                    .Single(materia => materia.Nombre== "Programación Web");
 
                 ProPrerequisitos opPrerequisitos = new ProPrerequisitos(db);
 
                 var lista = opPrerequisitos.Prerequisitos(tmpMateria);
+
+
 
                 Console.WriteLine("Los prerequisitos de: "+ tmpMateria.Nombre + " son:");
                 if (lista == null)
