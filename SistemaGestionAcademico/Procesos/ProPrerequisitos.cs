@@ -39,9 +39,21 @@ namespace Procesos
             // Preparo la lista de materias
             foreach(var pre in tmpPreReq)
             {
-                prerequisitos.Add(pre.Materia);
-            }
-                
+                // Llamada recursiva
+                var sublistaMaterias = Prerequisitos(pre.Materia);
+                if (sublistaMaterias == null) // nodo leap
+                {
+                    prerequisitos.Add(pre.Materia);
+                }
+                else
+                {
+                    prerequisitos.Add(pre.Materia);
+                    foreach (var subMateria in sublistaMaterias)
+                    {
+                        prerequisitos.Add(subMateria);
+                    }
+                }
+            }                
             return prerequisitos;
         }
     }

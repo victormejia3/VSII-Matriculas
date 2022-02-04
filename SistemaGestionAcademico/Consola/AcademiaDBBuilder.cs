@@ -13,8 +13,21 @@ namespace Consola
         public static AcademiaDB Crear()
         {
             // Lee la configuración acerca de qué base usar del archivo App.config
-            string dbtipo = ConfigurationManager.AppSettings[DBTipo];
-            string conn = ConfigurationManager.ConnectionStrings[dbtipo].ConnectionString;
+            string dbtipo;
+            string conn;
+            
+            dbtipo = ConfigurationManager.AppSettings[DBTipo];
+
+            if (dbtipo == null)
+            {
+                dbtipo = "Memoria";
+                conn = "SGA";
+            } 
+            else
+            {
+                conn = ConfigurationManager.ConnectionStrings[dbtipo].ConnectionString;
+            }
+            
             // Construye la conección acorde con el tipo
             DbContextOptions<AcademiaDB> contextOptions;
             switch (dbtipo)
