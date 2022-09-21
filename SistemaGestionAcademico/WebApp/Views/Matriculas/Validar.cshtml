@@ -17,15 +17,22 @@
                     <input class="form-control" asp-for="MatriculaId" />
                 </div>
                 <div class="form-group">
+                    <label class="control-label">Fecha</label>
+                    <input class="form-control" asp-for="Fecha" />
+                </div>
+                <div class="form-group">
                     <label class="control-label">Carrera</label>
+                    <input type="hidden" asp-for="CarreraId" /> 
                     <input class="form-control" asp-for="Carrera.Nombre" />
                 </div>
                 <div class="form-group">
                     <label class="control-label">Período</label>
+                    <input type="hidden" asp-for="PeriodoId" />
                     <input class="form-control" asp-for="Periodo.Nombre" />
                 </div>
                 <div class="form-group">
                     <label class="control-label">Estudiante</label>
+                    <input type="hidden" asp-for="EstudianteId" />
                     <input class="form-control" asp-for="Estudiante.Nombre" />
                 </div>
                 <div class="form-group">

@@ -26,32 +26,25 @@ namespace WebApp
         {
             string DBTipo = Configuration["DBTipo"];
             string DBConnStr = Configuration.GetConnectionString(DBTipo);
-            DbContextOptions<AcademiaDB> contextOptions;
 
             switch (DBTipo)
             {
                 case "SqlServer":
-                    contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
-                        .UseSqlServer(DBConnStr)
-                        .Options;
+                    services.AddDbContext<AcademiaDB>(options =>
+                        options.UseSqlServer(DBConnStr)
+                    );
                     break;
                 case "Postgres":
-                    contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
-                        .UseNpgsql(DBConnStr)
-                        .Options;
+                    services.AddDbContext<AcademiaDB>(options =>
+                        options.UseNpgsql(DBConnStr)
+                    );
                     break;
                 default: // Por defecto usa la memoria como base de datos
-                    contextOptions = new DbContextOptionsBuilder<AcademiaDB>()
-                        .UseInMemoryDatabase(DBConnStr)
-                        .Options;
+                    services.AddDbContext<AcademiaDB>(options =>
+                        options.UseInMemoryDatabase(DBConnStr)
+                    );
                     break;
-            }
-
-            services.AddDbContext<AcademiaDB>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("SqlServer")
-                )
-            );
+            }            
 
             services.AddControllersWithViews();
         }

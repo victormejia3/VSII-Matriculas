@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Procesos
 {
-    public class ProAprobaciones
+    public class ProMaterias
     {
         public AcademiaDB db { get; set; }
 
-        public ProAprobaciones(AcademiaDB db)
+        public ProMaterias(AcademiaDB db)
         {
             this.db = db;
         }

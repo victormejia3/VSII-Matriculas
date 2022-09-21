@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Modelo.Entidades;
 using Modelo.Operaciones;
 using ModeloDB;
+using Procesos;
 using System.Linq;
 
 namespace WebApp.Controllers
@@ -52,5 +54,37 @@ namespace WebApp.Controllers
             return View(matricula);
         }
 
+        //Proceso de validación
+        [HttpPost]
+        public IActionResult Validar(Matricula matricula)
+        {
+            string mensaje="";
+
+            var procMatricula = new ProMatriculas(db);
+            var tmpMatricula = db.matriculas.Find(matricula.MatriculaId);
+
+            if (tmpMatricula.Estado == MatriculaEstado.Pendiente)
+            {
+                if (procMatricula.Validar(matricula))
+                {
+                    tmpMatricula.Estado = MatriculaEstado.Aprobada;
+                    mensaje = $"La matrícula {matricula.MatriculaId} ha sido APROBADA";
+                }
+                else
+                {
+                    tmpMatricula.Estado = MatriculaEstado.Rechazada;
+                    mensaje = $"La matrícula {matricula.MatriculaId} ha sido RECHAZADA";
+                }
+                db.SaveChanges();
+            }
+            else
+            {
+                mensaje = $"La matrícula {matricula.MatriculaId} no fue procesada porque no se encuentra en estado pendiente";
+            }
+
+            TempData["mensaje"] = mensaje;
+
+            return RedirectToAction("Index");
+        }
     }
 }

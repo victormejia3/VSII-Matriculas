@@ -376,22 +376,24 @@ namespace CargaDatos
             };
 
             // Pre requisitos de ProdDig
-            Malla malProdDig = new Malla()
-            {
-                Carrera = carComercio,
-                Materia = matProdDig,
-                Nivel = "Nivel 3"
-            };
+            //Malla malProdDig = new Malla()
+            //{
+            //    Carrera = carComercio,
+            //    Materia = matProdDig,
+            //    Nivel = "Nivel 3"
+            //};
 
-            Prerequisito preProdDig_ComWeb = new Prerequisito()
-            {
-                Malla = malProdDig,
-                Materia = matComunicacionWeb
-            };
+            //Prerequisito preProdDig_ComWeb = new Prerequisito()
+            //{
+            //    Malla = malProdDig,
+            //    Materia = matComunicacionWeb
+            //};
 
             List<Malla> listaSubMallas = new List<Malla>()
             {
-                malELearning, malProdDig,malProgWeb
+                malELearning, 
+                //malProdDig,
+                malProgWeb
             };
             // Malla padre
             Malla mallaComerio = new Malla()
@@ -408,7 +410,8 @@ namespace CargaDatos
 
             List<Prerequisito> listaPrerequisitos = new List<Prerequisito>()
             {
-                preELearning_ProdDig, preELearning_VidMark, preProdDig_ComWeb,
+                preELearning_ProdDig, preELearning_VidMark, 
+                //preProdDig_ComWeb,
                 preProgWeb_AdminDB, preProgWeb_DisWeb, preProgWeb_LogProg
             };
             #endregion

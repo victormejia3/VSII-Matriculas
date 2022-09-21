@@ -1,5 +1,7 @@
-﻿using Procesos;
+﻿using Modelo.Entidades;
+using Procesos;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Consola
@@ -13,28 +15,22 @@ namespace Consola
 
             using(var db = AcademiaDBBuilder.Crear())
             {
-                var tmpMateria = db.materias
-                    .Where(materia => 
-                    materia.Nombre == "E-Learning" ||                       // NO
-                    materia.Nombre == "Lógica de Programación" ||           // SI
-                    materia.Nombre == "Diseño Web" ||                       // NO
-                    materia.Nombre == "Administración de Bases de Datos" || // SI
-                    materia.Nombre == "Video Marketing"                     // NO
-                );
-
-                var tmpEstudiante = db.estudiantes
-                    .Single(estudiante => estudiante.Nombre== "Pedro Navaja");
-
-                ProAprobaciones proaprobaciones = new ProAprobaciones(db);
-
-                foreach(var mat in tmpMateria)
+                var tmpListaMatriculas = new List<Matricula>()
                 {
-                    var resultado = proaprobaciones.Aprobo(tmpEstudiante, mat);
+                    new Matricula(){MatriculaId=3},
+                    new Matricula(){MatriculaId=6},
+                    new Matricula(){MatriculaId=9},
+                    new Matricula(){MatriculaId=12}
+                };
+
+                ProMatriculas proMatr = new ProMatriculas(db);
+
+                foreach(var mat in tmpListaMatriculas)
+                {
+                    var resultado = proMatr.Validar(mat);
 
                     Console.WriteLine(
-                        "El estudiante " + tmpEstudiante.Nombre +
-                        (resultado ? " SI " : " NO ") +
-                        " aprobó la materia de: " + mat.Nombre
+                        (resultado ? " SI " : " NO ") 
                     );
                 }                
             }

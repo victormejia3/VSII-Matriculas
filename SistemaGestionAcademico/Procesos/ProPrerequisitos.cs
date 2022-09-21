@@ -31,7 +31,7 @@ namespace Procesos
             // Consultar los prerequisitos
             var tmpPreReq = db.prerequisitos
                 .Include(pre => pre.Materia)
-                .Where(pre => pre.MallaId == tmpMateria.Malla.MallaId);
+                .Where(pre => pre.MallaId == tmpMateria.Malla.MallaId).ToList();
 
             // Si no tiene prerequisitos, retorna null
             if (tmpPreReq == null) return null;

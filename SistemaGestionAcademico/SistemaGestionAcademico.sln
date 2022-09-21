@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Procesos", "Procesos\Procesos.csproj", "{98D7556E-ABBC-41AB-9793-BFEA6B8EAFAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOp", "TestOp\TestOp.csproj", "{90D6659A-1245-4311-9388-BDDC2E352875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestOp", "TestOp\TestOp.csproj", "{90D6659A-1245-4311-9388-BDDC2E352875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

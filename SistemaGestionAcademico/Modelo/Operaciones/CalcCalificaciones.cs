@@ -27,9 +27,14 @@ namespace Modelo.Operaciones
             float respuesta;
 
             respuesta =
-                calificacion.Nota1 * peso1 +
-                calificacion.Nota2 * peso2 +
-                calificacion.Nota3 * peso3;
+                (float)Math.Round((double)calificacion.Nota1 * peso1, 2) +
+                (float)Math.Round((double)calificacion.Nota2 * peso2, 2) +
+                (float)Math.Round((double)calificacion.Nota3 * peso3, 2);
+
+            //respuesta =
+            //    calificacion.Nota1 * peso1 +
+            //    calificacion.Nota2 * peso2 +
+            //    calificacion.Nota3 * peso3;
 
             respuesta = (float) Math.Round((double) respuesta, 2);
 
